@@ -1,0 +1,32 @@
+.icon{
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    padding-top: 11px;
+    border-radius: 50%;
+}
+
+.medkitIcon{
+    color: #FF3402;
+    background-color: rgba(255, 52, 2, .5);
+}
+
+.childIcon{
+    color: #6fc50d;
+    background-color: rgba(127, 212, 27, .5);
+}
+
+.planeIcon{
+    color: #2fcaa9;
+    background-color: rgba(79, 228, 195, .5);
+}
+
+.billIcon{
+    color: #3079cc;
+    background-color: rgba(73, 145, 227, .5);
+}
+
+.chartIcon{
+    color: #e49606;
+    background-color: rgba(245, 168, 30, .5);
+}

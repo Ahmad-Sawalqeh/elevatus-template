@@ -13,7 +13,7 @@ const Hero = () => {
             <Row>
                 <Col lg="7">
                     <h1 className="text-white text-uppercase font-weight-bolder">welcome to our company</h1>
-                    <p className="lead text-white font-weight-bold pt-4">
+                    <p className="lead hero-lead text-white font-weight-bold pt-4">
                         Join us and discover an exciting range of career opportunities within the digital world
                     </p>
                 </Col>
