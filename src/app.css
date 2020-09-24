@@ -1,0 +1,17 @@
+main{
+    position: relative;
+    height: 750px;
+    background-image: radial-gradient(circle at 89% 11%, rgba(255,255,255, 0.07) 4%, rgba(255,255,255, 0.07) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 87% 49%, rgba(255,255,255, 0.14) 0%, rgba(255,255,255, 0.14) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 7% 66%, rgba(255,255,255, 0.14) 0%, rgba(255,255,255, 0.14) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 20% 8%, rgba(255,255,255, 0.07) 0%, rgba(255,255,255, 0.07) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 79% 42%, rgba(255,255,255, 0.14) 0%, rgba(255,255,255, 0.14) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 12% 49%, rgba(255,255,255, 0.14) 0%, rgba(255,255,255, 0.14) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 53% 62%, rgba(255,255,255, 0.14) 0%, rgba(255,255,255, 0.14) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 25% 81%, rgba(255,255,255, 0.14) 0%, rgba(255,255,255, 0.14) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 19% 88%, rgba(255,255,255, 0.14) 0%, rgba(255,255,255, 0.14) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 24% 20%, rgba(255,255,255, 0.07) 0%, rgba(255,255,255, 0.07) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 52% 23%, rgba(255,255,255, 0.14) 0%, rgba(255,255,255, 0.14) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 57% 55%, rgba(255,255,255, 0.07) 0%, rgba(255,255,255, 0.07) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 70% 62%, rgba(255,255,255, 0.07) 0%, rgba(255,255,255, 0.07) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 63% 13%, rgba(255,255,255, 0.14) 0%, rgba(255,255,255, 0.14) 5%,transparent 5%, transparent 100%),linear-gradient(271deg, rgb(33,115,169),rgb(86,179,242))
+}
+
+main::after{
+    content: '';
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(271deg, rgb(33,115,169),rgb(86,179,242));
+    position: absolute;
+    bottom: -70px;
+    z-index: -1;
+    transform-origin: bottom;
+    transform: skewY(-4deg);
+}

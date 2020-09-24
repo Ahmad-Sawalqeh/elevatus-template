@@ -1,0 +1,35 @@
+.bg-nav{
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.bg-input{
+    background-color:  rgba(255, 255, 255, 0.144);
+    border: 0;
+    padding-left: 40px;
+}
+
+.bg-input::placeholder{
+    color: white;
+}
+
+.formContainer{    
+    position: relative;
+}
+
+.formContainer::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f002';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 7px;
+    left: 14px;
+    color: whitesmoke;
+}
+
+.userImage{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
