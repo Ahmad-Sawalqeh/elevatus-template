@@ -22,7 +22,7 @@ const About = () => {
                     <img className="w-100 mb-3" alt="Youtube video" src={Youtube_video} />
                 </Col>
                 <Col lg="6" className="pl-3 mb-3">
-                    <p className="lead about-lead font-weight-bold">
+                    <p className="lead text-muted font-weight-bold">
                         Lorem ipsum dolor sit amet consectetur adipiscing elit, convallis torquent ante vestibulum sollicitudin velit per ultricies, nam volutpat diam facilisis gravida proin. Tempus lacus arcu hac praesent faucibus risus accumsan gravida, proin eros aliquam curae platea non nisl tincidunt, porta at est varius ad vestibulum lectus, porta at est varius ad vestibulum lectus, proin eros aliquam curae platea non nisl tincidunt,, proin eros aliquam curae platea non nisl tincidunt,.
                     </p>
                 </Col>

@@ -16,8 +16,6 @@ import {
 import userImage from '../../assets/img/userImage.jpg';
 import './navbar.css';
 
-const URL = 'https://pd-europe-west4-api-v1.elevatus.io/api/candidate/v1/company?sub_domain=demo';
-
 class ENavbar extends Component {
   constructor(props){
     super(props);
@@ -60,8 +58,8 @@ class ENavbar extends Component {
               </Form>   
             </Col>
             <Col lg="3" className='d-flex justify-content-end text-white'>
-              <i class="fas fa-bell mr-4 my-auto"></i>
-              <i class="far fa-clone mr-4 my-auto"></i>
+              <i className="fas fa-bell mr-4 my-auto"></i>
+              <i className="far fa-clone mr-4 my-auto"></i>
               <div className="my-auto">
                 <img alt="..." src={userImage} className="userImage mr-2 my-auto" />
                 <span>John Snow</span>

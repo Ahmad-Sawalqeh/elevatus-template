@@ -1,4 +1,6 @@
 import React from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
 import {
     Card,
     CardBody,
@@ -9,62 +11,80 @@ import {
 
 import './cards.css';
 
+const cards = [
+    {
+        title: 'Health Insurance',
+        icon: 'fa fa-medkit',
+        iconColor: 'medkitIcon'
+    },
+    {
+        title: 'Social Security',
+        icon: 'fa fa-child',
+        iconColor: 'childIcon'
+    },
+    {
+        title: 'Business Trips',
+        icon: 'fa fa-plane',
+        iconColor: 'planeIcon'
+    },
+    {
+        title: 'Competitive Salaries',
+        icon: 'fa fa-money-bill-alt',
+        iconColor: 'billIcon'
+    },
+    {
+        title: 'Career Development',
+        icon: 'fa fa-chart-bar',
+        iconColor: 'chartIcon'
+    },
+    {
+        title: 'Friendly',
+        icon: 'fa fa-users',
+        iconColor: 'usersIcon'
+    },
+    {
+        title: 'Pet Friendly',
+        icon: 'fa fa-paw',
+        iconColor: 'pawIcon'
+    },
+    {
+        title: 'Team Building',
+        icon: 'fa fa-futbol',
+        iconColor: 'futboltIcon'
+    }
+];
+
 const Cards = () => {
     return (
         <Container>
             <Row className="d-flex justify-content-between pb-5">
-                <Col>
-                    <Card>
-                        <CardBody className="text-center">
-                            <div className="icon medkitIcon mx-auto">
-                                <i className="fa fa-medkit" />
-                            </div>
-                            <p className="text-dark text-capitalize mb-0 pt-5 font-weight-bold">Health Insurance</p>
-                        </CardBody>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card>
-                        <CardBody className="text-center">
-                            <div className="icon childIcon mx-auto">
-                                <i className="fa fa-child" />
-                            </div>
-                            <p className="text-dark text-capitalize mb-0 pt-5 font-weight-bold">Social Security</p>
-                        </CardBody>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card>
-                        <CardBody className="text-center">
-                            <div className="icon planeIcon mx-auto">
-                                <i className="fa fa-plane" />
-                            </div>
-                            <p className="text-dark text-capitalize mb-0 pt-5 font-weight-bold">Business Trips</p>
-                        </CardBody>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card>
-                        <CardBody className="text-center">
-                            <div className="icon billIcon mx-auto">
-                                <i className="fa fa-money-bill-alt" />
-                            </div>
-                            <p className="text-dark text-capitalize mb-0 pt-5 font-weight-bold">Competitive Salaries</p>
-                        </CardBody>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card>
-                        <CardBody className="text-center">
-                            <div className="icon chartIcon mx-auto">
-                                <i className="fa fa-chart-bar" />
-                            </div>
-                            <p className="text-dark text-capitalize mb-0 pt-5 font-weight-bold">Career Development</p>
-                        </CardBody>
-                    </Card>
-                </Col>
+                <Swiper slidesPerView={5} >
+                    {cards.map((card, idx) => {
+                        return (
+                            <SwiperSlide key={idx}>
+                                <ECard info={card} />
+                            </SwiperSlide>
+                        )
+                    })}
+                </Swiper>
             </Row>
         </Container>
+    );
+}
+
+const ECard = (props) => {
+    const { info } = props;
+    return (
+        <Col>
+            <Card>
+                <CardBody className="text-center">
+                    <div className={`icon ${info.iconColor} mx-auto`}>
+                        <i className={info.icon} />
+                    </div>
+                    <p className="text-dark text-capitalize mb-0 pt-5 font-weight-bold">{info.title}</p>
+                </CardBody>
+            </Card>
+        </Col>
     );
 }
 

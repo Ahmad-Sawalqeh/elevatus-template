@@ -34,9 +34,9 @@ const items = [
 
 const Gallary = () => {
 
-    const cards = items.map((item) => {
+    const cards = items.map((item, idx) => {
         return (
-            <Col className="text-center mb-4" lg="4" md="6">
+            <Col key={idx} className="text-center mb-4" lg="4" md="6">
                 <Card>
                     <CardBody className="p-0">
                         <img alt="..." src={item.gallary_photo} className="w-100 rounded" />
@@ -50,7 +50,7 @@ const Gallary = () => {
         <Container className="py-5 postion">
             <Row className="py-3 px-3 d-flex flex-column">
                 <h2 className="font-weight-bolder titleColor">Gallary over view</h2>
-                <p className="lead about-lead font-weight-bold pt-3">
+                <p className="lead text-muted font-weight-bold pt-3">
                     We come from diverse backgrounds and various corners of the global.
                 </p>
             </Row>

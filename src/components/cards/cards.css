@@ -30,3 +30,18 @@
     color: #e49606;
     background-color: rgba(245, 168, 30, .5);
 }
+
+.usersIcon{
+    color: rgb(104, 47, 0);
+    background-color: rgba(104, 47, 0, .5);
+}
+
+.pawIcon{
+    color: rgb(129, 3, 119);
+    background-color: rgba(129, 3, 119, .5);
+}
+
+.futboltIcon{
+    color: rgb(0, 202, 209);
+    background-color: rgba(0, 202, 209, .5);
+}

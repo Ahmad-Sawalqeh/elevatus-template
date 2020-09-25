@@ -1,4 +1,6 @@
 import React from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
 import {
     Button,
     Card,
@@ -34,40 +36,25 @@ const persons = [
         photo: John_Doe,
         name: 'John Doe',
         job: 'Founder and CEO'
+    },
+    {
+        photo: Romina_Hadid,
+        name: 'Romina Hadid',
+        job: 'Marketing Strategist'
+    },
+    {
+        photo: Alexander_Smith,
+        name: 'Alex Smith',
+        job: 'UI/UX Designer'
+    },
+    {
+        photo: John_Doe,
+        name: 'John Doe',
+        job: 'Founder and CEO'
     }
 ];
 
 const Team = () => {
-
-    const team = persons.map((person) => {
-        return (
-            <Col className="text-center" lg="3" md="6" xs="6">
-                <Card className="border-0 bg-card">
-                    <CardBody>
-                        <img alt="..." src={person.photo} className="rounded-circle imgWidth" />
-                        <div className="pt-4">
-                            <div className="title">
-                                <h4 className="mb-1">{person.name}</h4>
-                                <h6 className="text-muted">{person.job}</h6>
-                            </div>
-                            <div className="mt-3">
-                                <Button className="rounded-circle" href="#" target="_blank" >
-                                    <i class="fab fa-twitter"></i>
-                                </Button>
-                                <Button className="rounded-circle ml-1" href="#" target="_blank" >
-                                    <i class="fab fa-facebook-f"></i>
-                                </Button>
-                                <Button className="rounded-circle ml-1" href="#" target="_blank" >
-                                    <i class="fab fa-linkedin-in"></i>
-                                </Button>
-                            </div>
-                        </div>
-                    </CardBody>
-                </Card>                        
-            </Col>
-        );
-    });
-
     return (
         <Container>
             <Row className="py-5">
@@ -78,15 +65,53 @@ const Team = () => {
                     <div className="font-weight-bold fontColor">View All</div>
                 </Col>
                 <Col lg="12">
-                    <p className="lead about-lead font-weight-bold pt-3">
+                    <p className="lead text-muted font-weight-bold pt-3">
                         We come from diverse backgrounds and various corners of the global.
                     </p>
                 </Col>
             </Row>
             <Row className="mb-5">
-                {team}
+                <Swiper slidesPerView={4} >
+                    {persons.map((person, idx) => {
+                        return (
+                            <SwiperSlide key={idx}>
+                                <Member person={person} />
+                            </SwiperSlide>
+                        )
+                    })}
+                </Swiper>
             </Row>
         </Container>
+    );
+}
+
+const Member = (props) => {
+    const { person } = props;
+    return (
+        <Col className="text-center">
+            <Card className="border-0 bg-card">
+                <CardBody>
+                    <img alt="..." src={person.photo} className="rounded-circle imgWidth" />
+                    <div className="pt-4">
+                        <div className="title">
+                            <h4 className="mb-1">{person.name}</h4>
+                            <h6 className="text-muted">{person.job}</h6>
+                        </div>
+                        <div className="mt-3">
+                            <Button className="rounded-circle" href="#" target="_blank" >
+                                <i className="fab fa-twitter"></i>
+                            </Button>
+                            <Button className="rounded-circle ml-1" href="#" target="_blank" >
+                                <i className="fab fa-facebook-f"></i>
+                            </Button>
+                            <Button className="rounded-circle ml-1" href="#" target="_blank" >
+                                <i className="fab fa-linkedin-in"></i>
+                            </Button>
+                        </div>
+                    </div>
+                </CardBody>
+            </Card>
+        </Col>
     );
 }
 

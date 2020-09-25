@@ -8,6 +8,7 @@ import Clients from './components/clients'
 import Team from './components/team'
 import Gallary from './components/gallary'
 import Opinions from './components/opinions'
+import Footer from './components/footer'
 
 import './app.css'
 
@@ -19,16 +20,17 @@ const App = () => {
                 <Hero />
             </main>
             <Cards />
-            <section class="bg-section">
+            <section className="bg-section">
                 <RecentOpenings />
                 <About />
             </section>
             <Clients />
-            <section class="bg-section">
+            <section className="bg-section">
                 <Team />
                 <Gallary />
             </section>
             <Opinions />
+            <Footer />
         </>
     )
 }

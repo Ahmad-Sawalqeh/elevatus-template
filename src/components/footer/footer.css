@@ -1,0 +1,24 @@
+.bg-footer{
+    padding: 70px 0 20px;
+    background-color: #EFF1F5;
+}
+
+.twitterIcon{
+    border: 0;
+    background-color: #1da1f2;
+}
+
+.facebookIcon{
+    border: 0;
+    background-color: #3b5998;
+}
+
+.instagramIcon{
+    border: 0;
+    background-color: #e1306c;
+}
+
+.githubIcon{
+    border: 0;
+    background-color: #333;
+}
