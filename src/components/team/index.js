@@ -1,13 +1,73 @@
 import React from "react";
 import {
-  Container,
-  Row,
-  Col
+    Button,
+    Card,
+    CardBody,
+    Container,
+    Row,
+    Col
 } from "reactstrap";
 
+import Ryan_Tompson from '../../assets/img/Ryan_Tompson.jpg';
+import Romina_Hadid from '../../assets/img/Romina_Hadid.jpg';
+import Alexander_Smith from '../../assets/img/Alexander_Smith.jpg';
+import John_Doe from '../../assets/img/John_Doe.jpg';
 import './team.css';
 
+const persons = [
+    {
+        photo: Ryan_Tompson,
+        name: 'Ryan Tompson',
+        job: 'Web Developer'
+    },
+    {
+        photo: Romina_Hadid,
+        name: 'Romina Hadid',
+        job: 'Marketing Strategist'
+    },
+    {
+        photo: Alexander_Smith,
+        name: 'Alex Smith',
+        job: 'UI/UX Designer'
+    },
+    {
+        photo: John_Doe,
+        name: 'John Doe',
+        job: 'Founder and CEO'
+    }
+];
+
 const Team = () => {
+
+    const team = persons.map((person) => {
+        return (
+            <Col className="text-center" lg="3" md="6" xs="6">
+                <Card className="border-0 bg-card">
+                    <CardBody>
+                        <img alt="..." src={person.photo} className="rounded-circle imgWidth" />
+                        <div className="pt-4">
+                            <div className="title">
+                                <h4 className="mb-1">{person.name}</h4>
+                                <h6 className="text-muted">{person.job}</h6>
+                            </div>
+                            <div className="mt-3">
+                                <Button className="rounded-circle" href="#" target="_blank" >
+                                    <i class="fab fa-twitter"></i>
+                                </Button>
+                                <Button className="rounded-circle ml-1" href="#" target="_blank" >
+                                    <i class="fab fa-facebook-f"></i>
+                                </Button>
+                                <Button className="rounded-circle ml-1" href="#" target="_blank" >
+                                    <i class="fab fa-linkedin-in"></i>
+                                </Button>
+                            </div>
+                        </div>
+                    </CardBody>
+                </Card>                        
+            </Col>
+        );
+    });
+
     return (
         <Container>
             <Row className="py-5">
@@ -23,10 +83,8 @@ const Team = () => {
                     </p>
                 </Col>
             </Row>
-            <Row>
-                <div className="carousel">
-
-                </div>
+            <Row className="mb-5">
+                {team}
             </Row>
         </Container>
     );

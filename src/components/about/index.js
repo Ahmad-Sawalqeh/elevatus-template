@@ -13,7 +13,7 @@ const About = () => {
         <Container className="py-5">
             <Row className="py-3 px-3 d-flex flex-column">
                 <h2 className="font-weight-bolder titleColor">About Us</h2>
-                <p className="lead about-lead font-weight-bold pt-3">
+                <p className="lead text-muted font-weight-bold pt-3">
                     We come from diverse backgrounds and various corners of the We come from diverse backgrounds and various
                 </p>
             </Row>

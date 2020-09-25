@@ -1,0 +1,43 @@
+.bg-opinions{
+    background-color: #F4F5F7;
+    border-bottom: 3px solid #fff;
+}
+
+.carouselItemHeight{
+    min-height: 450px;
+}
+
+.dot{
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #F5335C;
+}
+
+.opinionsLead{
+    font-size: 21px;
+}
+
+.carouselControl{
+    width:60px;
+}
+
+.carousel-control-next, .carousel-control-prev{
+    color: #5E73E5;    
+}
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%235E73E5' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%235E73E5' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.imagePosition{
+    width: 220px;
+    height: 300px;
+    transform-origin: bottom left;
+    transform: skewY(4deg) skewX(-4deg);
+}
