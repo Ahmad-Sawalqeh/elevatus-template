@@ -49,3 +49,20 @@ main::after{
     linear-gradient(135deg, rgb(255,255,255),rgb(255,255,255))
 }
 
+.swiper-button-prev::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f104';
+    color: #5E73E5;
+    position: relative;
+    right: 16px;
+}
+
+.swiper-button-next::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f105';
+    color: #5E73E5;
+    position: relative;
+    left: 16px;
+}

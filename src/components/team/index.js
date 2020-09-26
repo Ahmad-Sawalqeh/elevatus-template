@@ -1,4 +1,5 @@
 import React from "react";
+import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import {
@@ -15,6 +16,8 @@ import Romina_Hadid from '../../assets/img/Romina_Hadid.jpg';
 import Alexander_Smith from '../../assets/img/Alexander_Smith.jpg';
 import John_Doe from '../../assets/img/John_Doe.jpg';
 import './team.css';
+
+SwiperCore.use([Navigation]);
 
 const persons = [
     {
@@ -71,7 +74,7 @@ const Team = () => {
                 </Col>
             </Row>
             <Row className="mb-5">
-                <Swiper slidesPerView={4} >
+                <Swiper slidesPerView={4} navigation>
                     {persons.map((person, idx) => {
                         return (
                             <SwiperSlide key={idx}>

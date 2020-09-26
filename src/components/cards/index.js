@@ -1,4 +1,5 @@
 import React from "react";
+import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import {
@@ -10,6 +11,8 @@ import {
 } from "reactstrap";
 
 import './cards.css';
+
+SwiperCore.use([Navigation]);
 
 const cards = [
     {
@@ -58,7 +61,7 @@ const Cards = () => {
     return (
         <Container>
             <Row className="d-flex justify-content-between pb-5">
-                <Swiper slidesPerView={5} >
+                <Swiper slidesPerView={5} navigation >
                     {cards.map((card, idx) => {
                         return (
                             <SwiperSlide key={idx}>
@@ -76,7 +79,7 @@ const ECard = (props) => {
     const { info } = props;
     return (
         <Col>
-            <Card>
+            <Card className="shadow">
                 <CardBody className="text-center">
                     <div className={`icon ${info.iconColor} mx-auto`}>
                         <i className={info.icon} />
