@@ -61,7 +61,7 @@ const cards = [
   }
 ];
 
-const Recent = () => {
+const Recent = (props) => {
   return (
     <Container>
       <Row className="py-5">
@@ -73,7 +73,7 @@ const Recent = () => {
         </Col>
       </Row>
       <Row className="mb-5">        
-        <Swiper slidesPerView={4} navigation>
+        <Swiper  breakpoints={props.breakpoints} navigation>
           {cards.map((card, idx) => {            
             return (
               <SwiperSlide key={idx}>

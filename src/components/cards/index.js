@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
@@ -57,11 +57,11 @@ const cards = [
     }
 ];
 
-const Cards = () => {
+const Cards = (props) => {
     return (
         <Container>
             <Row className="d-flex justify-content-between pb-5">
-                <Swiper slidesPerView={5} navigation >
+                <Swiper breakpoints={props.breakpoints} navigation >
                     {cards.map((card, idx) => {
                         return (
                             <SwiperSlide key={idx}>

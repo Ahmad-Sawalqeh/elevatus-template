@@ -12,6 +12,25 @@ import Footer from './components/footer'
 
 import './app.css'
 
+const breakpoints = {
+    1200: {
+        width: 1200,
+        slidesPerView: 4,
+    },
+    1024: {
+        width: 1024,
+        slidesPerView: 3,
+    },
+    768: {
+        width: 768,
+        slidesPerView: 2,
+    },
+    481: {
+        width: 481,
+        slidesPerView: 1,
+    }
+}
+
 const App = () => {
     return (
         <>
@@ -19,14 +38,12 @@ const App = () => {
                 <ENavbar />
                 <Hero />
             </main>
-            <Cards />
+            <Cards breakpoints={breakpoints} />
             <section className="bg-section">
-                <RecentOpenings />
+                <RecentOpenings breakpoints={breakpoints} />
                 <About />
-            </section>
-            <Clients />
-            <section className="bg-section">
-                <Team />
+                <Clients breakpoints={breakpoints} />
+                <Team breakpoints={breakpoints} />
                 <Gallary />
             </section>
             <Opinions />

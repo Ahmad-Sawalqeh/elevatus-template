@@ -45,7 +45,7 @@ const clients = [
 ];
 
 
-const Clients = () => {
+const Clients = (props) => {
     return (
         <section className="bg-client">
             <Container className="py-5">
@@ -56,7 +56,7 @@ const Clients = () => {
                     </p>
                 </Row>
                 <Row>
-                    <Swiper slidesPerView={4} navigation >
+                    <Swiper  breakpoints={props.breakpoints} navigation >
                         {clients.map((client, idx) => {
                             return (
                                 <SwiperSlide key={idx} >

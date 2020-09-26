@@ -33,3 +33,26 @@
     height: 40px;
     border-radius: 50%;
 }
+
+.login{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.relative{
+    position: relative;
+}
+.position{
+    background-color: rgba(39, 123, 178, .9);
+    position: absolute;
+    top: 50px;
+    z-index: 1;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .login{
+        justify-content: space-around;
+    }
+    
+}

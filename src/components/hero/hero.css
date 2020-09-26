@@ -3,6 +3,14 @@
 }
 
 .hero-lead{
+    max-width: 600px;
     font-size: 23px;
 }
 
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .padding{
+        padding-top: 170px;
+    }
+    
+}

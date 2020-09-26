@@ -57,7 +57,7 @@ const persons = [
     }
 ];
 
-const Team = () => {
+const Team = (props) => {
     return (
         <Container>
             <Row className="py-5">
@@ -74,7 +74,7 @@ const Team = () => {
                 </Col>
             </Row>
             <Row className="mb-5">
-                <Swiper slidesPerView={4} navigation>
+                <Swiper  breakpoints={props.breakpoints} navigation>
                     {persons.map((person, idx) => {
                         return (
                             <SwiperSlide key={idx}>

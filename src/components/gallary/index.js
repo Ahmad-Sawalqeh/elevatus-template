@@ -36,7 +36,7 @@ const Gallary = () => {
 
     const cards = items.map((item, idx) => {
         return (
-            <Col key={idx} className="text-center mb-4" lg="4" md="6">
+            <Col key={idx} className="text-center mb-4" lg="4" md="6" sm="6" xs="6">
                 <Card>
                     <CardBody className="p-0">
                         <img alt="..." src={item.gallary_photo} className="w-100 rounded" />
