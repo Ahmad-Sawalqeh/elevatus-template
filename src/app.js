@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect, useContext, Fragment } from "react";
+import { SettingsContext } from './context';
+import { DotLoader } from "react-spinners";
+
 import ENavbar from './components/navbar'
 import Hero from './components/hero'
 import Cards from './components/cards'
@@ -12,42 +15,46 @@ import Footer from './components/footer'
 
 import './app.css'
 
-const breakpoints = {
-    1200: {
-        width: 1200,
-        slidesPerView: 4,
-    },
-    1024: {
-        width: 1024,
-        slidesPerView: 3,
-    },
-    768: {
-        width: 768,
-        slidesPerView: 2,
-    },
-    481: {
-        width: 481,
-        slidesPerView: 1,
-    }
-}
-
 const App = () => {
+
+    const { data } = useContext(SettingsContext);
+
+    const [isLoading, setIsloading] = useState(true)
+
+    useEffect(() => {
+        if(Boolean(Object.keys(data).length)) setIsloading(false)
+    }, [data])
+
     return (
         <>
-            <main>
-                <ENavbar />
-                <Hero />
-            </main>
-            <Cards breakpoints={breakpoints} />
-            <section className="bg-section">
-                <RecentOpenings breakpoints={breakpoints} />
-                <About />
-                <Clients breakpoints={breakpoints} />
-                <Team breakpoints={breakpoints} />
-                <Gallary />
-            </section>
-            <Opinions />
-            <Footer />
+            {Boolean(Object.keys(data).length) ? (
+                <Fragment>
+                    <main>
+                        <ENavbar />
+                        <Hero />
+                    </main>
+                    <Cards />
+                    <section className="bg-section">
+                        <RecentOpenings />
+                        <About />
+                        <Clients />
+                        <Team />
+                        <Gallary />
+                    </section>
+                    <Opinions />
+                    <Footer />
+                </Fragment>
+            )
+            :
+                <div className="loader">
+                    <DotLoader
+                        loading={isLoading}
+                        size={250}
+                        sizeUnit={"px"}
+                        color="#3498db"
+                    />
+                </div>
+            }
         </>
     )
 }

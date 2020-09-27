@@ -1,51 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eefd1fc82ea3a5a9aad7cd2b95457111",
+    "revision": "9aeec6b620b1d9e82ae5cc1095f83652",
     "url": "/index.html"
   },
   {
-    "revision": "dc9f077836a41da3b253",
+    "revision": "3663d63bb82a81afd67a",
     "url": "/static/css/2.359f5945.chunk.css"
   },
   {
-    "revision": "5d674d675ad3dff32f2c",
-    "url": "/static/css/main.f674c474.chunk.css"
+    "revision": "e6c8c64877aeda65b134",
+    "url": "/static/css/main.ffef5f7c.chunk.css"
   },
   {
-    "revision": "dc9f077836a41da3b253",
-    "url": "/static/js/2.58014c0f.chunk.js"
+    "revision": "3663d63bb82a81afd67a",
+    "url": "/static/js/2.86178c64.chunk.js"
   },
   {
     "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/static/js/2.58014c0f.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.86178c64.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5d674d675ad3dff32f2c",
-    "url": "/static/js/main.665cd2c7.chunk.js"
+    "revision": "e6c8c64877aeda65b134",
+    "url": "/static/js/main.18ebe0eb.chunk.js"
   },
   {
     "revision": "7c9de8cab8001ef2abf5",
     "url": "/static/js/runtime-main.8de47b4b.js"
-  },
-  {
-    "revision": "497bb3590e24c9f8b645864bfffc39b8",
-    "url": "/static/media/Alexander_Smith.497bb359.jpg"
-  },
-  {
-    "revision": "230071328b705f8686cabd26a85ed6a5",
-    "url": "/static/media/John_Doe.23007132.jpg"
-  },
-  {
-    "revision": "dcfcf3b77210fe85b0abc8260e6fa70e",
-    "url": "/static/media/Romina_Hadid.dcfcf3b7.jpg"
-  },
-  {
-    "revision": "53033970a416368da35794389680266f",
-    "url": "/static/media/Ryan_Tompson.53033970.jpg"
-  },
-  {
-    "revision": "8bf44ba984682970c7a12bb524e39ebc",
-    "url": "/static/media/Youtube_video.8bf44ba9.png"
   },
   {
     "revision": "085b1dd8427dbeff10bd55410915a3f6",
@@ -106,18 +86,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ee09ad7553b8ad3d81150d609d5341a0",
     "url": "/static/media/fa-solid-900.ee09ad75.woff"
-  },
-  {
-    "revision": "1e7c70dc7d471d845aeed9e9bead0fe5",
-    "url": "/static/media/gallary_1.1e7c70dc.jpg"
-  },
-  {
-    "revision": "ba449a0697388668ef05e043ffdeafca",
-    "url": "/static/media/gallary_2.ba449a06.jpg"
-  },
-  {
-    "revision": "340d449113ccd9b6a0d500fc6ab4e8a8",
-    "url": "/static/media/opinion_1.340d4491.jpg"
   },
   {
     "revision": "230071328b705f8686cabd26a85ed6a5",

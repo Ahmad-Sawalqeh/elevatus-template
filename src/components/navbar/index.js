@@ -10,8 +10,7 @@ import {
   Form,
   Input,
   Container,
-  Col,
-  Row
+  Col
 } from 'reactstrap';
 
 import userImage from '../../assets/img/userImage.jpg';

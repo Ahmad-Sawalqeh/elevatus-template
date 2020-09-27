@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
@@ -8,9 +8,10 @@ import {
   Col,
   Card,
   CardBody,
-  Button,
-  Progress
+  Button
 } from "reactstrap";
+
+import { SettingsContext } from '../../context';
 
 import './recent.css';
 
@@ -61,7 +62,10 @@ const cards = [
   }
 ];
 
-const Recent = (props) => {
+const Recent = () => {
+
+  const { breakpoints } = useContext(SettingsContext);
+
   return (
     <Container>
       <Row className="py-5">
@@ -73,7 +77,7 @@ const Recent = (props) => {
         </Col>
       </Row>
       <Row className="mb-5">        
-        <Swiper  breakpoints={props.breakpoints} navigation>
+        <Swiper  breakpoints={breakpoints} navigation>
           {cards.map((card, idx) => {            
             return (
               <SwiperSlide key={idx}>

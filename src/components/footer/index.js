@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
     Button,
     Container,
@@ -6,9 +6,14 @@ import {
     Col,
 } from "reactstrap";
 
+import { SettingsContext } from '../../context';
+
 import './footer.css'
 
 const Footer = () => {
+
+    const { data: {portal:{career: {website_and_social:{data}}}} } = useContext(SettingsContext);
+
     return (
         <>
             <footer className="bg-footer text-center">
@@ -29,24 +34,24 @@ const Footer = () => {
                         </Button>
                         <Button
                             className="rounded-circle ml-3 facebookIcon"
-                            href="https://www.facebook.com/"
+                            href="https://www.facebook.com/Elevatus.io"
                             target="_blank"
                         >
                             <i className="fab fa-facebook-square"></i>
                         </Button>
                         <Button
                             className="rounded-circle ml-3 instagramIcon"
-                            href="https://www.instagram.com/elevatus.jobs/?hl=ur"
+                            href={data.instagram_url}
                             target="_blank"
                         >
                             <i className="fab fa-instagram"></i>
                         </Button>
                         <Button
-                            className="rounded-circle ml-3 githubIcon"
-                            href="https://github.com/"
+                            className="rounded-circle ml-3 linkedinIcon"
+                            href={data.linkedin_url}
                             target="_blank"
                         >
-                            <i className="fab fa-github"></i>
+                            <i className="fab fa-linkedin-in"></i>
                         </Button>
                         </Col>
                     </Row>

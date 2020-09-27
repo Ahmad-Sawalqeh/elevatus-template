@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
     Card,
     CardBody,
@@ -7,39 +7,20 @@ import {
     Col
 } from "reactstrap";
 
-import gallary_1 from '../../assets/img/gallary_1.jpg';
-import gallary_2 from '../../assets/img/gallary_2.jpg';
-import './gallary.css';
+import { SettingsContext } from '../../context';
 
-const items = [
-    {
-        gallary_photo: gallary_1,
-    },
-    {
-        gallary_photo: gallary_2,
-    },
-    {
-        gallary_photo: gallary_1,
-    },
-    {
-        gallary_photo: gallary_2,
-    },
-    {
-        gallary_photo: gallary_1,
-    },
-    {
-        gallary_photo: gallary_2,
-    }
-];
+import './gallary.css';
 
 const Gallary = () => {
 
-    const cards = items.map((item, idx) => {
+    const { data: {portal:{career: {gallery : {data}}}} } = useContext(SettingsContext);
+
+    const cards = data.map((item, idx) => {
         return (
             <Col key={idx} className="text-center mb-4" lg="4" md="6" sm="6" xs="6">
                 <Card>
                     <CardBody className="p-0">
-                        <img alt="..." src={item.gallary_photo} className="w-100 rounded" />
+                        <img alt="..." src={item.url} className="w-100 rounded" />
                     </CardBody>
                 </Card>                        
             </Col>
