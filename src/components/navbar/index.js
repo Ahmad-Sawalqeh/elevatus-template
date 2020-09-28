@@ -1,4 +1,10 @@
+/**
+ * imoprting React librara to work with JSX format
+ */
 import React, { Component } from "react";
+/**
+ * importing the reactstrap package to export all bootstrap components
+ */
 import {
   Collapse,
   Navbar,
@@ -12,11 +18,24 @@ import {
   Container,
   Col
 } from 'reactstrap';
-
+/**
+ * importing image for loged-in user
+ */
 import userImage from '../../assets/img/userImage.jpg';
+/**
+ * importing an external style document
+ */
 import './navbar.css';
-
+/**
+ * Class component representing a Navbar component
+ * @extends Component
+ * @returns JSX Navbar component
+ */
 class ENavbar extends Component {
+    /**
+   * Constructor
+   * @param {object} props - any data passed in from up-level components
+   */
   constructor(props){
     super(props);
     this.state = {
@@ -24,11 +43,16 @@ class ENavbar extends Component {
       data: {}
     };
   }
-
+  /**
+   * method to toggle the value of isOpen property in the state object, for showing/hiding the navbar on medium and small screens.
+   * working only on screens 768px and below
+   */
   toggle = () => {
     this.setState({ ...this.state, isOpen : !this.state.isOpen});
   }
-
+  /**
+   *  main method to render JSX of the component
+   */
   render() {
     return (
       <Navbar dark expand="lg" className="bg-nav py-3 d-flex">
@@ -52,11 +76,13 @@ class ENavbar extends Component {
                 </Nav>
               </Collapse>
             </Col>
+            {/* serach bar */}
             <Col lg="3" md="7" xs="12" className="py-1"> 
               <Form className="formContainer">
                 <Input type="text" name="search" placeholder="Search" className="bg-input" />
               </Form>   
             </Col>
+            {/* sign-in/sign-up log-in/log-out */}
             <Col lg="4" md="5" xs="12" className='login text-white py-1'>
               <i className="fas fa-bell mr-4 my-auto"></i>
               <i className="far fa-clone mr-4 my-auto"></i>
@@ -70,5 +96,5 @@ class ENavbar extends Component {
     );
   }
 }
-
+// exporting the Navbar component to another modules
 export default ENavbar;

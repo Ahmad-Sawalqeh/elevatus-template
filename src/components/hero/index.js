@@ -1,13 +1,27 @@
+/**
+ * imoprting React librara to work with JSX format,
+ */
 import React from "react";
+/**
+ * importing the reactstrap package to export all bootstrap components
+ */
 import {
     Container,
     Row,
     Col
 } from 'reactstrap';
-
+/**
+ * importing an external style document
+ */
 import './hero.css';
-
+/**
+ * function component representing a Hero component
+ * @returns JSX Hero component
+ */
 const Hero = () => {
+    /**
+     *  main method to return JSX of the component
+     */
     return (
         <Container className="padding">
             <Row>
@@ -21,5 +35,5 @@ const Hero = () => {
         </Container>
     );
 }
-
+// exporting the Gallary component to another modules
 export default Hero;

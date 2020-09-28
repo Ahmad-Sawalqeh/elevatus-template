@@ -1,19 +1,42 @@
+/**
+ * imoprting React librara to work with JSX format,
+ * importing useContext hook to get website state  from context-api (state managment system)
+ */
 import React, { useContext } from "react";
+/**
+ * importing the reactstrap package to export all bootstrap components
+ */
 import {
     Button,
     Container,
     Row,
     Col,
 } from "reactstrap";
-
+/**
+ * importing created context from context-api (state managment system) to get the state with the help of useContext hook into our component
+ */
 import { SettingsContext } from '../../context';
-
+/**
+ * importing image for company logo
+ */
+import logo from './../../assets/img/logo.png'
+/**
+ * importing an external style document
+ */
 import './footer.css'
-
+/**
+ * function component representing a Footer component
+ * @returns JSX Footer component
+ */
 const Footer = () => {
-
+    /**
+     * using useContext hook with created context to get website state from context-api,
+     * also dectructure the state object to get the object that we need for this component only
+     */
     const { data: {portal:{career: {website_and_social:{data}}}} } = useContext(SettingsContext);
-
+    /**
+     *  main method to return JSX of the component
+     */
     return (
         <>
             <footer className="bg-footer text-center">
@@ -59,12 +82,12 @@ const Footer = () => {
                 </Container>
                 <Container>
                     <p className="lead text-center font-weight-bolder py-4 m-0">
-                        Powered by <span>ELEVATUS</span> 2020
+                        Powered by <img alt="..." src={logo} className="footerLogoStyle mx-2" /> 2020
                     </p>
                 </Container>
             </footer>
         </>
     );
 }
-
+// exporting the Footer component to another modules
 export default Footer;

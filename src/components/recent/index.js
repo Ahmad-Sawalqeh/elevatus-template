@@ -1,7 +1,23 @@
+/**
+ * imoprting React librara to work with JSX format,
+ * importing useContext hook to get website state  from context-api (state managment system)
+ */
 import React, { useContext } from "react";
+/**
+ * imoprting swiper package to work with carousel and sliders,
+ */
 import SwiperCore, { Navigation } from 'swiper';
+/**
+ * imoprting swiper components
+ */
 import { Swiper, SwiperSlide } from 'swiper/react';
+/**
+ * imoprting an external style document for carousel and sliders of the swiper components
+ */
 import 'swiper/swiper-bundle.css';
+/**
+ * importing the reactstrap package to export all bootstrap components
+ */
 import {
   Container,
   Row,
@@ -10,13 +26,21 @@ import {
   CardBody,
   Button
 } from "reactstrap";
-
+/**
+ * importing created context from context-api (state managment system) to get the state with the help of useContext hook into our component
+ */
 import { SettingsContext } from '../../context';
-
+/**
+ * importing an external style document
+ */
 import './recent.css';
-
+/**
+ * using the " use " middelware to give us apility to handle navigation of the carousel items
+ */
 SwiperCore.use([Navigation]);
-
+/**
+ * cards variable for fake data, only to show the cards in this component
+ */
 const cards = [
   {
       Job: 'Strategy Manager',
@@ -61,11 +85,19 @@ const cards = [
     progress: 55
   }
 ];
-
+/**
+ * function component representing a Recent component
+ * @returns JSX Recent component
+ */
 const Recent = () => {
-
+  /**
+   * using useContext hook with created context to get website state from context-api,
+   * also dectructure the state object to get the variable that we need for this component only
+   */
   const { breakpoints } = useContext(SettingsContext);
-
+  /**
+   *  main method to return JSX of the component
+   */
   return (
     <Container>
       <Row className="py-5">
@@ -78,9 +110,15 @@ const Recent = () => {
       </Row>
       <Row className="mb-5">        
         <Swiper  breakpoints={breakpoints} navigation>
+          {/**
+          *  mapping on " cards " array to render all items of the slider 
+          */}
           {cards.map((card, idx) => {            
             return (
               <SwiperSlide key={idx}>
+                {/**
+                *  passing " props " for each ECard component to render its own information  
+                */}
                 <ECard info={card} />
               </SwiperSlide>
             )
@@ -90,9 +128,18 @@ const Recent = () => {
     </Container>
   );
 }
-
+/**
+ * function component representing a ECard component (items of the slider)
+ * @returns JSX ECard component
+ */
 const ECard = (props) => {
+  /**
+ * dectructuring the props object to get the information of the item
+ */
   const { info } = props;
+  /**
+ *  main method to return JSX of the component
+ */
   return (
     <Col>
       <Card className="cardsitting mb-4">
@@ -114,5 +161,5 @@ const ECard = (props) => {
     </Col>
   )
 }
-
+// exporting the Recent component to another modules
 export default Recent;

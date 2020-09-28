@@ -1,3 +1,9 @@
+.LogoStyle{    
+    Filter: grayscale(100%);
+    width: 110px;
+    height: 20px;
+}
+
 .bg-nav{
     background-color: rgba(255, 255, 255, 0.08);
 }

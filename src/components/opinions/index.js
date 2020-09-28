@@ -1,4 +1,12 @@
+/**
+ * imoprting React librara to work with JSX format,
+ * importing useContext hook to get website state  from context-api (state managment system),
+ * importing useState hook to create an internal state for a function component
+ */
 import React, { useContext, useState } from "react";
+/**
+ * importing the reactstrap package to export all bootstrap components
+ */
 import {
     Carousel,
     CarouselItem,
@@ -7,27 +15,45 @@ import {
     Row,
     Col
 } from "reactstrap";
-
+/**
+ * importing created context from context-api (state managment system) to get the state with the help of useContext hook into our component
+ */
 import { SettingsContext } from '../../context';
-
+/**
+ * importing an external style document
+ */
 import './opinions.css';
-
+/**
+ * function component representing a Opinions component
+ * @returns JSX Opinions component
+ */
 const Opinions = () => {
-
+    /**
+     * using useContext hook with created context to get website state from context-api,
+     * also dectructure the state object to get the object that we need for this component only
+     */
     const { data: {portal:{career: {testimonial: {data}}}} } = useContext(SettingsContext);
-
+    /**
+     * using useState hook to create an internal state for saving the active index in the carousel
+     */
     const [activeIndex, setActiveIndex] = useState(0);
-
+    /**
+     * method to set the value of activeIndex in the component state, to save the index of the active slide, after clicking on next arrow button.
+     */
     const next = () => {
         const nextIndex = activeIndex === data.length - 1 ? 0 : activeIndex + 1;
         setActiveIndex(nextIndex);
     }
-
+    /**
+     * method to set the value of activeIndex in the component state, to save the index of the active slide, after clicking on previous arrow button.
+     */
     const previous = () => {
         const nextIndex = activeIndex === 0 ? data.length - 1 : activeIndex - 1;
         setActiveIndex(nextIndex);
     }
-
+    /**
+     *  mapping on " data " array to save all items (in JSX format) of the carousel in slides array
+     */
     const slides = data.map((item) => {
         return (
             <CarouselItem
@@ -39,7 +65,7 @@ const Opinions = () => {
                         <h3 className="font-weight-bolder titleColor">{item.name}</h3>
                         <p className="opinionsLead titleColor">{item.position}</p>
                         <span className="dot"></span><span className="dot"></span><span className="dot"></span>
-                        <article className="opinionsLead mt-4 titleColor">
+                        <article className="opinionsLead mt-4 titleColor text-justify">
                             {item.description}
                         </article>
                     </Col>
@@ -50,7 +76,9 @@ const Opinions = () => {
             </CarouselItem>
         );
     });
-
+    /**
+     *  main method to return JSX of the component
+     */
     return (
         <section className="bg-opinions py-5">
             <Container>
@@ -67,6 +95,9 @@ const Opinions = () => {
                         previous={previous}
                     >
                         <CarouselControl className="carouselControl" direction="prev" directionText="Previous" onClickHandler={previous} />
+                        {/**
+                        *  rendering all carousel items
+                        */}
                         {slides}
                         <CarouselControl className="carouselControl" direction="next" directionText="Next" onClickHandler={next} />
                     </Carousel>
@@ -75,5 +106,5 @@ const Opinions = () => {
         </section>
     );
 }
-
+// exporting the Opinions component to another modules
 export default Opinions;

@@ -1,7 +1,22 @@
+/**
+ * imoprting React librara to work with JSX format
+ */
 import React, { Component } from "react";
+/**
+ * imoprting swiper package to work with carousel and sliders,
+ */
 import SwiperCore, { Navigation } from 'swiper';
+/**
+ * imoprting swiper components
+ */
 import { Swiper, SwiperSlide } from 'swiper/react';
+/**
+ * imoprting an external style document for carousel and sliders of the swiper components
+ */
 import 'swiper/swiper-bundle.css';
+/**
+ * importing the reactstrap package to export all bootstrap components
+ */
 import {
     Button,
     Card,
@@ -10,18 +25,33 @@ import {
     Row,
     Col
 } from "reactstrap";
-
+/**
+ * importing created context from context-api (state managment system) to get the state with the help of useContext hook into our component
+ */
 import { SettingsContext } from '../../context';
-
+/**
+ * importing an external style document
+ */
 import './team.css';
-
+/**
+ * using the " use " middelware to give us apility to handle navigation of the carousel items
+ */
 SwiperCore.use([Navigation]);
-
+/**
+ * Class component representing a Team component
+ * @extends Component
+ * @returns JSX Team component
+ */
 class Team extends Component {
-
     static contextType = SettingsContext;
-
-    render(){   
+    /**
+     *  main method to render JSX of the component
+     */
+    render(){  
+        /**
+         * using context property from the created context to get website state from context-api,
+         * also dectructure the state object to get the object that we need for this component only
+         */ 
         const { data: {portal:{career: {employee: {data}}}}, breakpoints } = this.context;     
         return (
             <Container>
@@ -40,9 +70,15 @@ class Team extends Component {
                 </Row>
                 <Row className="mb-5">
                     <Swiper  breakpoints={breakpoints} navigation>
+                        {/**
+                        *  mapping on " data " array to render all items of the slider 
+                        */}
                         {data.map((person, idx) => {
                             return (
                                 <SwiperSlide key={idx}>
+                                    {/**
+                                    *  passing " props " for each slider component render its own information  
+                                    */}
                                     <Member person={person} />
                                 </SwiperSlide>
                             )
@@ -53,9 +89,18 @@ class Team extends Component {
         );
     }
 }
-
+/**
+ * function component representing a Member component (items of the slider)
+ * @returns JSX Member component
+ */
 const Member = (props) => {
+    /**
+     * dectructuring the props object to get the information of the item
+     */
     const { person } = props;
+    /**
+     *  main method to return JSX of the component
+     */
     return (
         <Col className="text-center">
             <Card className="border-0 bg-card">
@@ -83,5 +128,5 @@ const Member = (props) => {
         </Col>
     );
 }
-
+// exporting the Team component to another modules
 export default Team;

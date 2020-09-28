@@ -25,12 +25,12 @@
     background-color: rgba(79, 228, 195, .5);
 }
 
-.billIcon{
+.money-bill-altIcon{
     color: #3079cc;
     background-color: rgba(73, 145, 227, .5);
 }
 
-.chartIcon{
+.chart-barIcon{
     color: #e49606;
     background-color: rgba(245, 168, 30, .5);
 }
@@ -45,7 +45,7 @@
     background-color: rgba(129, 3, 119, .5);
 }
 
-.futboltIcon{
+.futbolIcon{
     color: rgb(0, 202, 209);
     background-color: rgba(0, 202, 209, .5);
 }
