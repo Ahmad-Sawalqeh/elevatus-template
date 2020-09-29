@@ -102,9 +102,9 @@ const Member = (props) => {
      *  main method to return JSX of the component
      */
     return (
-        <Col className="text-center">
+        <Col className="p-0">
             <Card className="border-0 bg-card">
-                <CardBody>
+                <CardBody className="text-center min-w-100">
                     <img alt="..." src={person.media.url} className="rounded-circle imgWidth" />
                     <div className="pt-4">
                         <div className="title">

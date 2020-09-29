@@ -48,7 +48,7 @@ function SettingProvider(props) {
      * state object,
      * data has the value of API,
      * setData method to update the state
-     * breakpoints variable has all srceens width that will help the " swiper " packeage and the used slider to be responsive
+     * breakpoints property has all srceens width that will help the " swiper " packeage and the used slider be responsive
      */
     const state = {
         data,

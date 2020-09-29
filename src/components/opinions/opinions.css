@@ -4,7 +4,7 @@
 }
 
 .carouselItemHeight{
-    min-height: 550px;
+    min-height: 500px;
 }
 
 .dot{
@@ -24,9 +24,6 @@
     width:60px;
 }
 
-.carousel-control-next, .carousel-control-prev{
-    color: #5E73E5; 
-}
 .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%235E73E5' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
@@ -36,8 +33,25 @@
 }
 
 .imagePosition{
-    width: 220px;
-    height: 300px;
+    width: 300px;
+    height: 380px;
     transform-origin: bottom left;
-    transform: skewY(4deg) skewX(-4deg);
+    box-shadow: 0px 0px 20px 0px #bbb;
+    transform: skew(-4deg,4deg);
+    transition: .5s
+}
+
+@media (max-width: 990px) {
+
+    .carouselItemHeight{
+        order: 1;
+        text-align: center;
+    }
+    
+    .imagePosition{
+        width: 290px;
+        height: 370px;
+        transform: skew(0deg)
+    }
+
 }

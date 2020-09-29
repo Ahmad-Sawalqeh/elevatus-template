@@ -46,7 +46,7 @@ const About = () => {
             </Row>
             <Row className="d-flex justify-content-between">
                 <Col lg="6">
-                    <ReactPlayer className="w-100 mb-3" url={about_us.data.url} controls={true} />
+                    <ReactPlayer className="w-100 mb-3 videoHeight" url={about_us.data.url} controls={true} />
                 </Col>
                 <Col lg="6" className="pl-3 mb-3">
                     <p className="lead text-muted font-weight-bold text-justify">

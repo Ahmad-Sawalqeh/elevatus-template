@@ -59,7 +59,7 @@ const Cards = () => {
                 */}
                     {data.map((card, idx) => {
                         return (
-                            <SwiperSlide key={idx}>
+                            <SwiperSlide key={idx} >
                                 {/**
                                 *  passing " props " for each slider component render its own information  
                                 */}
@@ -86,7 +86,7 @@ const ECard = (props) => {
      */
     return (
         <Col>
-            <Card className="shadow">
+            <Card>
                 <CardBody className="text-center">
                     <div className={`icon ${info.icon.slice(6)}Icon mx-auto`}>
                         <i className={info.icon} />

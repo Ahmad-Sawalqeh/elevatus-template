@@ -87,7 +87,7 @@ class Clients extends Component {
 }
 /**
  * function component representing a Client component (items of the slider)
- * @returns JSX ECard component
+ * @returns JSX Client component
  */
 const Client = (props) => {
     /**
@@ -100,7 +100,7 @@ const Client = (props) => {
     return (
         <Col>
             <Card className="border-0">
-                <CardBody className="text-center">
+                <CardBody className="text-center bg">
                     <img alt="..." src={info.url} className="imageWidth" />
                 </CardBody>
             </Card>

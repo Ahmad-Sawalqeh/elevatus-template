@@ -77,7 +77,7 @@ const App = () => {
                 <div className="loader">
                     <DotLoader
                         loading={isLoading}
-                        size={250}
+                        size={200}
                         sizeUnit={"px"}
                         color="#3498db"
                     />

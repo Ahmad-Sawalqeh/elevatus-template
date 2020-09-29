@@ -60,8 +60,8 @@ const Opinions = () => {
                 className="w-100"
                 key={item.media.url}
             >
-                <Row className="d-flex justify-content-center carouselItemHeight">               
-                    <Col lg="4" xs="10" className="p-4">
+                <Row className="d-flex justify-content-center ">               
+                    <Col lg="5" xs="10" className="p-4 carouselItemHeight">
                         <h3 className="font-weight-bolder titleColor">{item.name}</h3>
                         <p className="opinionsLead titleColor">{item.position}</p>
                         <span className="dot"></span><span className="dot"></span><span className="dot"></span>
@@ -69,7 +69,7 @@ const Opinions = () => {
                             {item.description}
                         </article>
                     </Col>
-                    <Col lg="4" xs="10" className="d-flex justify-content-center align-items-center p-4">
+                    <Col lg="5" xs="10" className="d-flex justify-content-center align-items-center p-4">
                         <img alt="..." src={item.media.url} className="imagePosition" />
                     </Col>
                 </Row>

@@ -75,3 +75,6 @@ main::after{
     left: 16px;
 }
 
+.swiper-slide {
+    width: 287px !important;
+}

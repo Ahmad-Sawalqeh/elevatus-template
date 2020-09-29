@@ -1,3 +1,6 @@
 .titleColor{
     color: #2E2E5D;
 }
+.videoHeight{
+    max-height: 300px !important;
+}

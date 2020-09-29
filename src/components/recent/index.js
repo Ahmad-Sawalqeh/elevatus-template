@@ -142,7 +142,7 @@ const ECard = (props) => {
  */
   return (
     <Col>
-      <Card className="cardsitting mb-4">
+      <Card className="cardsitting my-4">
         <CardBody className="d-flex flex-column justify-content-between">
           <div>
             <h5 className="fonColor">{info.Job}</h5>
